@@ -32,10 +32,12 @@ public class DBLanguageSupplier implements LanguageSupplier {
         Long id = message.getChatId();
         Optional<User> user = userRepository.findById(id);
         if (user.isPresent()) {
-            Optional<Setting> userSettings = settingRepository.findById(SettingCompositeKey.builder()
+            Optional<Setting> optional = settingRepository.findById(SettingCompositeKey.builder()
                     .user(user.get()).key("LANGUAGE_CODE").build());
 
-            return languageConverter.getLanguageCode(userSettings.get().getValue());
+            return optional.isPresent() ?
+                    optional.get().getValue() :
+                    languageConverter.getDefaultLanguageCode();
         } else {
             throw new UserNotFoundException("Пользователь не найден");
         }
