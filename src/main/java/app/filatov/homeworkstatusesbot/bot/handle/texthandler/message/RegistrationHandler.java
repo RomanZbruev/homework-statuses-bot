@@ -1,7 +1,7 @@
-package app.filatov.homeworkstatusesbot.bot.handle.message;
+package app.filatov.homeworkstatusesbot.bot.handle.texthandler.message;
 
-import app.filatov.homeworkstatusesbot.bot.handle.state.UserState;
-import app.filatov.homeworkstatusesbot.bot.handle.util.HandlerUtil;
+import app.filatov.homeworkstatusesbot.bot.handle.texthandler.state.UserState;
+import app.filatov.homeworkstatusesbot.bot.handle.texthandler.util.HandlerUtil;
 import app.filatov.homeworkstatusesbot.exception.UserNotFoundException;
 import app.filatov.homeworkstatusesbot.model.User;
 import app.filatov.homeworkstatusesbot.model.repository.UserRepository;

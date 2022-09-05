@@ -36,7 +36,7 @@ public class DBLanguageSupplier implements LanguageSupplier {
                     .user(user.get()).key("LANGUAGE_CODE").build());
 
             return optional.isPresent() ?
-                    optional.get().getValue() :
+                    languageConverter.getLanguageCode(optional.get().getValue()) :
                     languageConverter.getDefaultLanguageCode();
         } else {
             throw new UserNotFoundException("Пользователь не найден");

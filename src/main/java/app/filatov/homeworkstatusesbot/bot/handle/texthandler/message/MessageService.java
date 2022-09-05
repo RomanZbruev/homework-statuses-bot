@@ -1,4 +1,4 @@
-package app.filatov.homeworkstatusesbot.bot.handle.message;
+package app.filatov.homeworkstatusesbot.bot.handle.texthandler.message;
 
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
-package app.filatov.homeworkstatusesbot.bot.handle.state;
+package app.filatov.homeworkstatusesbot.bot.handle.texthandler.state;
 
-import app.filatov.homeworkstatusesbot.bot.handle.message.MessageHandler;
+import app.filatov.homeworkstatusesbot.bot.handle.texthandler.message.MessageHandler;
 import org.springframework.stereotype.Component;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public class StateRouter {
         handlers.forEach(handler -> this.handlers.put(handler.getHandlerType(), handler));
     }
 
-    public SendMessage process(UserState state, Message message) {
+    public BotApiMethod<?> process(UserState state, Message message) {
         MessageHandler messageHandler = handlers.get(getHandlerFamily(state));
         return messageHandler.handle(message);
     }

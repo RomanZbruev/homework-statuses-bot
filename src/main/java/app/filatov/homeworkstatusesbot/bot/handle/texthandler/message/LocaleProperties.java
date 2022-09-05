@@ -1,4 +1,4 @@
-package app.filatov.homeworkstatusesbot.bot.handle.message;
+package app.filatov.homeworkstatusesbot.bot.handle.texthandler.message;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

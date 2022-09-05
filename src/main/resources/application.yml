@@ -3,6 +3,9 @@ telegram:
   bot_token: ${BOT_TOKEN}}
   bot_path: ${BOT_PATH}
 
+api:
+  url: ${API_URL}
+
 loader:
   url: ${LOADER_URL}
   path: ${LOADER_PATH}
@@ -16,7 +19,7 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 locale:

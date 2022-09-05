@@ -1,6 +1,6 @@
 package app.filatov.homeworkstatusesbot.model;
 
-import app.filatov.homeworkstatusesbot.bot.handle.state.UserState;
+import app.filatov.homeworkstatusesbot.bot.handle.texthandler.state.UserState;
 import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 

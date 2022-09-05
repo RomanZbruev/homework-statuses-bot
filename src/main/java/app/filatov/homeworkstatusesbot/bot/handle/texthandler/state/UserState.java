@@ -1,4 +1,4 @@
-package app.filatov.homeworkstatusesbot.bot.handle.state;
+package app.filatov.homeworkstatusesbot.bot.handle.texthandler.state;
 
 public enum UserState {
     REGISTRATION,
