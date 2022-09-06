@@ -38,7 +38,6 @@ public class HelpHandler implements MessageHandler {
         SendMessage sendMessage = new SendMessage(String.valueOf(chatId),
                 messageService.getMessage("message.help", languageSupplier.getLanguage(message)));
         sendMessage.setReplyMarkup(keyboardSupplier.getApiKeyLinkButtonMarkup());
-
         return sendMessage;
     }
 
