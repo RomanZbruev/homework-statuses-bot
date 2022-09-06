@@ -57,6 +57,11 @@ public class TextMessageHandler {
                 }
         );
 
+        if(user.getState().equals(UserState.ERROR)){
+            user.setApiKey(null);
+            user.setState(UserState.REGISTRATION);
+        }
+
         UserState state = switch (text) {
             case "/start" -> UserState.REGISTRATION;
             case "/settings" -> UserState.SETTINGS;
